@@ -165,18 +165,11 @@ class MainActivity : AppCompatActivity() {
                 mainBinding.taskRV.layoutManager = LinearLayoutManager(
                     this,LinearLayoutManager.VERTICAL,false
                 )
-                mainBinding.listOrGridImg.setImageResource(R.drawable.ic_view_module)
-            }else{
-                mainBinding.taskRV.layoutManager = StaggeredGridLayoutManager(
-                    2,LinearLayoutManager.VERTICAL
-                )
-                mainBinding.listOrGridImg.setImageResource(R.drawable.ic_view_list)
+
             }
         }
 
-        mainBinding.listOrGridImg.setOnClickListener {
-            isListMutableLiveData.postValue(!isListMutableLiveData.value!!)
-        }
+
 
         val taskRVVBListAdapter = TaskAdapter(isListMutableLiveData ) { type, position, task ->
             if (type == "delete") {
@@ -198,18 +191,14 @@ class MainActivity : AppCompatActivity() {
                             task.id,
                             updateETTitle.text.toString().trim(),
                             updateETDesc.text.toString().trim(),
-//                           here i Date updated
+
                             Date()
                         )
                         hideKeyBoard(it)
                         updateTaskDialog.dismiss()
                         taskViewModel
                             .updateTask(updateTask)
-//                            .updateTaskPaticularField(
-//                                task.id,
-//                                updateETTitle.text.toString().trim(),
-//                                updateETDesc.text.toString().trim()
-//                            )
+
                     }
                 }
                 updateTaskDialog.show()

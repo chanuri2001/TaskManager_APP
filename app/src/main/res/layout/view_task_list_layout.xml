@@ -56,8 +56,8 @@ app:cardUseCompatPadding="true">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Content"
-        android:fontFamily="sans-serif-black"
         android:maxLines="3"
+        android:fontFamily="@font/oleoscript_regular"
         android:layout_marginTop="4dp"/>
 
     <TextView
@@ -65,7 +65,7 @@ app:cardUseCompatPadding="true">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Date"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/ubuntu_mono_regular"
         android:maxLines="3"
         android:layout_marginTop="4dp"/>
 </LinearLayout>
