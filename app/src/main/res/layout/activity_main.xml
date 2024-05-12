@@ -26,10 +26,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="12dp"
-                android:text="Let's do Today's Task"
+                android:text="Todo Planner"
                 android:textColor="@color/blue"
-                android:textSize="28sp"
-                android:fontFamily="@font/ptserif_bolditalic" />
+                android:textSize="38sp"
+                android:fontFamily="@font/oleoscript_new" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
