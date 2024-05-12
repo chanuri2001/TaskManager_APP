@@ -12,7 +12,7 @@ import com.coding.meet.todo_app.models.Task
 import java.text.SimpleDateFormat
 import java.util.Locale
 
-class TaskRVVBListAdapter(
+class TaskAdapter(
     private val isList: MutableLiveData<Boolean>,
     private val deleteUpdateCallback: (type: String, position: Int, task: Task) -> Unit,
 ) :
@@ -34,12 +34,12 @@ class TaskRVVBListAdapter(
 
             viewTaskListLayoutBinding.dateTxt.text = dateFormat.format(task.date)
 
-            viewTaskListLayoutBinding.deleteImg.setOnClickListener {
+            viewTaskListLayoutBinding.deleteButton.setOnClickListener {
                 if (adapterPosition != -1) {
                     deleteUpdateCallback("delete", adapterPosition, task)
                 }
             }
-            viewTaskListLayoutBinding.editImg.setOnClickListener {
+            viewTaskListLayoutBinding.updateButton.setOnClickListener {
                 if (adapterPosition != -1) {
                     deleteUpdateCallback("update", adapterPosition, task)
                 }
